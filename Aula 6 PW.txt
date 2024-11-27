@@ -5,7 +5,7 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0"
          <title>Parte 3 - Introdução ao CSS</title>
          <!--CSS externo deve ser assim-->
-         <link reks="stylesheet" href="style.css">
+         <link rel="stylesheet" href="style.css">
 
          <!--Aqui CSS interno-->
          <style>
