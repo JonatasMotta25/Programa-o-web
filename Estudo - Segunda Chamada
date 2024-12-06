@@ -1,0 +1,156 @@
+#Html
+
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" >
+	<script defer src="script.js"></script>
+    <title>Página web</title>
+</head>
+
+<body>
+
+<img src="imagem1logo.png" alt="logo">
+
+<br>
+
+<button id="btn-traduzir">English</button>
+
+<hr>
+
+<nav>
+   <ul class="menu">
+      <li id="'traduzivel"><a href="inicio.html" target="_blank">Inicio</a></li>
+      <li id="traduzivel"><a href="destaque.html" target="_blank">Destaque</a></li>
+      <li id="traduzivel"><a href="catalago.html" target="_blank">Catálago</a></li>
+   </ul>
+</nav>
+
+<img src="imagem2prova.png" class="menuimg">
+
+<br>
+
+<h1>Uma ração especial, para um amigo fantástico!</h1>
+
+<hr>
+
+<footer>
+
+<p>Avenida Akhabara, 123 / Tel: 91234-5678</p>
+
+</footer>
+
+</body>
+
+</html>
+
+#CSS
+
+body {
+	margin: 10px;
+	background-color: beige;
+	text-align: center;
+}
+
+img {
+	width: 200px;
+}
+
+.menuimg {
+	width: 250px;
+}
+
+button:hover {
+	background-color: lightgray;
+}
+
+p { 
+   margin: 0px;
+}
+
+hr {
+	border: 1px solid black;
+	margin: 0px;
+}
+
+nav ul{
+	justify-content: center;
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+}
+
+nav li {
+     display: inline;
+        }
+
+nav ul li{
+	margin: 0 100px;
+}
+
+nav ul li a {
+	display: block;
+	font-size: 20px;
+	padding: 15px 20px;
+	text-decoration: none;
+	color: black;
+	text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+}
+
+nav ul li a:hover {
+	background-color: #d3d3d3;
+	color: black;
+	border: 3px solid #333;
+	
+}
+
+nav ul li a::selection {
+	background-color: #000;
+	color: white;
+	border: 2px solid #222;
+}
+
+#mudar-lingua {
+	margin-top: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+	border: 1px solid black;
+	background-color: #f4f4f4;
+	transition: 0.6s;
+}
+#mudar-lingua:hover {
+	background-color: #d9d9d9;
+
+#java script
+
+const menu = document.querySelectorAll(".menu li a");
+
+button.addEventListener("click", () => {
+  if (!ingles) {
+    alert("127.0.0.1:5500 diz\ntexto em inglês");
+
+    menu[0].textContent = "Home";
+    menu[1].textContent = "Highlight";
+    menu[2].textContent = "Catalog";
+
+    document.querySelector("h1").textContent = "A special food for a fantastic friend!";
+    document.querySelector("footer p").textContent = "Akihabara Avenue, 123 / Phone: 91234-5678";
+
+
+    button.textContent = "Português";
+    ingles = true;
+  } else {
+
+    menu[0].textContent = "Início";
+    menu[1].textContent = "Destaque";
+    menu[2].textContent = "Catálogo";
+
+    document.querySelector("h1").textContent = "Uma ração especial, para um amigo fantástico!";
+    document.querySelector("footer p").textContent = "Avenida Akihabara, 123 / Tel: 91234-5678";
+
+    button.textContent = "English";
+    ingles = false;
+  }
+});
